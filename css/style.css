@@ -1,0 +1,985 @@
+/***** global *****/
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/***** End global *****/
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "sidebar main"
+    "sidebar main";
+}
+.layout .sidebar {
+  grid-area: sidebar;
+  background-color: rgba(250, 235, 215, 0.112);
+  overflow-y: auto;
+  height: auto;
+  position: static;
+  border: 1px solid rgba(0, 0, 0, 0.237);
+  box-shadow: 1px black;
+}
+
+.layout .main {
+  grid-area: main;
+  background-color: #f9fafb;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "leader"
+    "stock"
+    "Income"
+    "money"
+    "vigor"
+    "Analysis"
+    "tablle"
+    "preview"
+    "test"
+    "Monthly"
+    "details";
+}
+
+/***** sidbar *****/
+
+.sidebar .manger {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.sidebar .manger .manger-contant h1 {
+  margin: 0;
+  font-weight: bold;
+}
+.sidebar .manger .manger-contant p {
+  margin: 0;
+}
+
+.sidebar .manger-i {
+  margin-top: 11px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 22px;
+  background-color: #4036dd;
+  border-radius: 15px;
+  order: -1;
+  font-weight: 700;
+  margin-left: 4px;
+}
+.home {
+  margin-top: 30px;
+}
+.home li {
+  margin-bottom: 30px;
+  color: #6a7282;
+}
+.home li span {
+  padding: 10px;
+}
+.home li.test {
+  color: #2151e7;
+  font-weight: 600;
+  background-color: #eff6ff;
+  padding-block: 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+.procedure {
+  margin-top: 15px;
+}
+.procedure span {
+  margin-right: 10px;
+}
+
+.procedure li {
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+.procedure li:hover {
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  transform: translatex(5px);
+}
+
+.procedure li.i-one i {
+  background-color: #dbe8fc;
+  color: #2151e7;
+  padding: 7px;
+  width: fit-content;
+
+  border-radius: 10px;
+}
+
+.procedure li.i-two i {
+  background-color: #d4f3e1;
+  color: green;
+  padding: 7px;
+  width: fit-content;
+
+  border-radius: 10px;
+}
+
+.procedure li.i-tree i {
+  background-color: #f7edff;
+  color: #9810fa;
+  padding: 7px;
+  width: fit-content;
+
+  border-radius: 10px;
+}
+
+.procedure li.i-four i {
+  background-color: #fff0e6;
+  color: red;
+  padding: 7px;
+  width: fit-content;
+
+  border-radius: 10px;
+}
+
+/***** End sidbar *****/
+
+.main > div {
+  /* margin: 10px; */
+  border-radius: 10px;
+  padding-right: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.237);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.55);
+}
+/***** leader *****/
+
+.leader {
+  grid-area: leader;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fdfeff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  padding-block: 15px;
+}
+.leader .leader-conin {
+  display: flex;
+  flex-wrap: wrap;
+}
+.leader .leader-conin .card {
+  position: relative;
+}
+.leader .leader-conin .card span {
+  position: absolute;
+  left: -90px;
+  top: 10px;
+  background-color: #f0fdf4;
+  color: #008236;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+.leader .leader-conin .card span::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background-color: #77e3a1;
+  color: #77e3a1;
+  position: absolute;
+  top: 20px;
+  right: -1px;
+  border-radius: 50%;
+}
+.leader .leader-conin .card h1 {
+  margin: 0;
+}
+.leader .leader-conin .card p {
+  margin: 0;
+  font-size: 13px;
+}
+.leader-serch {
+  display: flex;
+  justify-items: center;
+  gap: 10px;
+}
+
+.leader .leader-i {
+  margin-top: 11px;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 22px;
+  background-color: #4036dd;
+  border-radius: 15px;
+  order: -1;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.leader-asama {
+  background-color: white;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.237);
+  box-shadow: 1px black;
+}
+.leader-asama .yosef {
+  margin-left: 9px;
+}
+.leader-asama .yosef p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.leader-asama img {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  order: 1;
+}
+.leader-serch .serch {
+  align-self: center;
+  margin-left: 20px;
+}
+.leader-serch .serch .fa-solid {
+  background-color: #f3f4f6;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.053);
+  width: fit-content;
+  border-radius: 10px;
+}
+.leader-serch .serch .fa-regular {
+  background-color: #f3f4f6;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.043);
+  width: fit-content;
+  border-radius: 10px;
+  position: relative;
+}
+.leader-serch .serch .fa-regular span {
+  background-color: #fb2c36;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  padding: 1px 5px;
+}
+/***** End leader *****/
+
+/***** stock *****/
+
+.stock {
+  grid-area: stock;
+  background-color: white;
+}
+.stock p {
+  margin: 0;
+}
+.p-big {
+  font-size: 36px;
+  font-weight: bold;
+}
+.Balance {
+  color: #00a64a;
+  font-weight: bold;
+}
+
+.Income {
+  grid-area: Income;
+  background-color: white;
+}
+.Income p {
+  margin: 0;
+}
+
+.money {
+  grid-area: money;
+  background-color: white;
+}
+.money p {
+  margin: 0;
+}
+.money .Expenses {
+  color: #e7000b;
+  font-weight: bold;
+}
+/***** End stock *****/
+
+/***** tabble *****/
+
+.tablle {
+  grid-area: tablle;
+}
+.tablle .offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+.tablle .offer span {
+  font-weight: 300;
+  cursor: pointer;
+  color: gray;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.tablle .offer span i {
+  font-size: 12px;
+}
+
+.tablle .offer span:hover {
+  background-color: rgba(0, 0, 0, 0.032);
+  color: black;
+}
+.tablle table {
+  width: 100%;
+  table-layout: fixed;
+  text-align: right;
+  border-collapse: separate;
+  border-spacing: 10px 30px;
+}
+
+.tablle table tr img {
+  border-radius: 50%;
+  width: 35px;
+}
+
+.tablle table .avatar {
+  display: flex;
+}
+.tablle table .avatar-p p {
+  margin: 0;
+  margin-right: 4px;
+  font-size: 13px;
+  color: gray;
+  font-weight: bold;
+}
+
+.tablle .take {
+  background-color: #dbfce7;
+  border-radius: 50px;
+  padding: 3px 6px;
+}
+.tablle table .avatar i {
+  background-color: #ffedd4;
+  color: red;
+  width: 40px;
+  padding-block: 9px;
+  border-radius: 50%;
+  align-self: center;
+}
+.hide-mobile{
+  display: none;
+}
+
+
+/***** End tabble *****/
+/***** vigor *****/
+.vigor {
+  grid-area: vigor;
+}
+.copy {
+  background-color: #eff6ff;
+  border-left: 3px solid #4036dd;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding-inline: 5px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.vigor .copy-i {
+  background-color: #dbeafe;
+  color: #4036dd;
+  padding: 8px;
+  border-radius: 50%;
+}
+.vigor .copy-contant {
+  margin-top: 30px;
+  margin-right: 5px;
+}
+.vigor .copy-contant h4 {
+  margin: 0;
+}
+.vigor .copy-contant p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.vigor .copy .tally {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  color: #4036dd;
+  font-size: 14px;
+}
+.best {
+  background-color: #f0fdf4;
+  border-left: 3px solid #00c950;
+}
+.best .copy-i {
+  background-color: #dbfce7;
+  color: #00c950;
+  padding: 8px;
+  border-radius: 50%;
+}
+.vigor .best .tally {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  color: #00c950;
+  font-size: 14px;
+}
+.vigor .btn {
+  text-align: center;
+}
+.vigor .btn button {
+  color: #2151e7;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  outline: none;
+}
+
+/***** End vigor *****/
+
+/***** Analysis *****/
+
+.Analysis {
+  grid-area: Analysis;
+  text-align: center;
+}
+.Analysis > p {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+.Analysis .Analysis-p {
+  font-size: 13px;
+  margin: 0;
+  color: gray;
+}
+.Evil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Evil span {
+  font-weight: 300;
+  cursor: pointer;
+  color: gray;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.Evil span:hover {
+  background-color: rgba(0, 0, 0, 0.032);
+  color: black;
+}
+.Analysis .all {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.Analysis .all .days {
+  width: 50%;
+  margin-bottom: 40px;
+}
+.Analysis .all .days p {
+  margin: 0;
+  font-size: 12px;
+}
+.Analysis .all .days .days-p {
+  color: red;
+}
+.Analysis .all .days .days-2 {
+  color: #00a64a;
+}
+.Analysis .all .days .fa-wifi {
+  background-color: #dbeafe;
+  width: fit-content;
+  color: #2151e7;
+  padding: 10px;
+  border-radius: 10px;
+}
+.Analysis .all .days .fa-bolt-lightning {
+  background-color: #ffedd4;
+  width: fit-content;
+  color: gold;
+  padding: 10px;
+  border-radius: 10px;
+}
+.Analysis .all .days .fa-phone {
+  background-color: #d4f3e1;
+  width: fit-content;
+  color: #00c950;
+  padding: 10px;
+  border-radius: 10px;
+}
+.Analysis .all .days .fa-laptop {
+  background-color: rgba(205, 92, 92, 0.306);
+  width: fit-content;
+  color: red;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/***** End Analysis *****/
+
+/***** Monthly *****/
+
+.Monthly {
+  grid-area: Monthly;
+}
+
+/***** layout card *****/
+
+.Monthly .perant {
+  perspective: 1000px;
+  height: 200px;
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+.Monthly .perant .iner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+.desk,
+.iner-b {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.06),
+    0 6px 6px rgba(0, 0, 0, 0.06);
+}
+.perant:hover .iner {
+  transform: rotateY(180deg);
+}
+
+.iner-b {
+  transform: rotateY(180deg);
+  background-color: #0c1321;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 10px;
+}
+.iner-b > p {
+  margin-right: 30px;
+}
+.iner-b .number {
+  margin: auto;
+  width: 80%;
+  height: 29px;
+  background-color: white;
+}
+.iner-b .number p {
+  color: gray;
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.iner-b .smol {
+  text-align: center;
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background-color: white;
+  color: gray;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: auto;
+  border-radius: 20px;
+  font-size: 18px;
+}
+.iner-b .smol span {
+  position: absolute;
+  top: -18px;
+  left: 40px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.iner-b .instant {
+  background-color: #000000ee;
+  width: 80%;
+  height: 20%;
+  margin: 20px auto 0;
+}
+
+/***** End layout card *****/
+
+.Monthly .perant .iner-a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Monthly .perant .desk {
+  background-color: #2151e7;
+  padding: 20px 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.Monthly .perant .desk-2 {
+  background-color: red;
+}
+
+.Monthly .perant .calor-1 {
+  width: 40px;
+  height: 25px;
+  position: relative;
+}
+.Monthly .perant .calor-1 span {
+  position: absolute;
+  border-radius: 10px;
+}
+.Monthly .perant .calor-1 span:first-child {
+  background-color: #9810fa;
+  right: 0;
+  width: 50px;
+  height: 30px;
+}
+.Monthly .perant .calor-1 span:last-child {
+  background-color: cornflowerblue;
+  top: 6px;
+
+  right: 11px;
+  width: 30px;
+  height: 20px;
+}
+.Monthly .perant .iner-a .visa {
+  margin-left: 13px;
+}
+
+.Monthly .perant .iner-a .visa i {
+  font-size: 25px;
+}
+.Monthly .perant .desk > p {
+  text-align: center;
+  font-size: 20px;
+}
+.Monthly .perant .desk p i {
+  margin-left: 5px;
+}
+.Monthly .perant .end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.Monthly .perant .end p {
+  margin: 0;
+}
+
+/***** End Monthly *****/
+
+/***** test *****/
+
+.test {
+  grid-area: test;
+}
+.test .gate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.test .gate > div {
+  padding-inline: 10px;
+  margin-inline: 10px;
+}
+.test .gate span {
+  font-size: 12px;
+  color: rgb(100, 116, 139);
+  font-weight: 600;
+}
+.test .gate .gate-1 {
+  position: relative;
+}
+.test .gate .gate-1::after {
+  content: "";
+  background-color: #10b981;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 8px;
+  right: -10px;
+}
+
+.test .gate .gate-2 {
+  position: relative;
+}
+.test .gate .gate-2::after {
+  content: "";
+  background-color: #ef4444;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 8px;
+  right: -10px;
+}
+.chart {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.bars {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 150px;
+}
+
+.week-cl {
+  width: 15px;
+  height: 100px;
+  background: #10b981;
+  border-radius: 3px;
+}
+
+.week-cl-2 {
+  width: 15px;
+  height: 60px;
+  background: #ef4444;
+  border-radius: 3px;
+}
+.week span {
+  color: rgb(100, 116, 139);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/***** End test *****/
+
+/***** details *****/
+
+.details {
+  grid-area: details;
+}
+.account .account-2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+
+.account .account-i-p {
+  display: flex;
+}
+
+.account .accoount-i {
+  background-color: #dbeafe;
+  padding: 7px;
+  color: #2151e7;
+  border-radius: 10px;
+  font-size: 17px;
+  width: fit-content;
+  margin-left: 10px;
+}
+.account .account-p p {
+  margin: 0;
+  color: oklch(0.21 0.034 264.665);
+}
+
+.account .account-p :last-child {
+  color: oklch(0.551 0.027 264.364);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/***** End details *****/
+
+/*****  preview*****/
+
+.preview {
+  grid-area: preview;
+}
+.total {
+  background-color: #eef5ff;
+  height: 150px;
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.total > div {
+  margin-bottom: 20px;
+}
+.total p {
+  margin: 0;
+}
+
+.total .Budget {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Budget-1 p:first-child {
+  color: #2151e7;
+  font-size: 14px;
+}
+.Budget-1 p:last-child {
+  color: #1c398e;
+  font-weight: bold;
+  font-size: 28px;
+}
+.Budget-2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.preview .Budget-2 p:last-child {
+  color: #00c950;
+}
+
+.item {
+  margin-top: px;
+}
+.preview .user {
+  display: flex;
+  justify-content: space-around;
+  color: oklch(0.446 0.03 256.802);
+  font-size: 12px;
+}
+.bar {
+  width: 80%;
+  height: 10px;
+  background-color: #6a7282;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.bar-2 {
+  width: 80%;
+  height: 10px;
+  background-color: #2151e7;
+  border-radius: 10px;
+}
+
+.iner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iner .Budget-i {
+  background-color: #77e3a1;
+  width: fit-content;
+  color: #e7000b;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 9px;
+}
+
+/***** End preview *****/
+
+/***** media qqqq*****/
+
+@media screen and (max-width: 768px) {
+}
+  
+  @media screen and (min-width: 992px) {
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (min-width: 1200px) {
+    .main > div {
+      margin: 10px;
+    }
+    .hide-mobile{
+  display: table-cell;
+}
+
+
+    .layout {
+      display: grid;
+      grid-template-columns: 0.2fr 1fr;
+
+      grid-template-areas:
+        "sidebar main"
+        "sidebar main";
+    }
+    .layout .sidebar {
+      grid-area: sidebar;
+      background-color: rgba(250, 235, 215, 0.112);
+      overflow-y: auto;
+      height: 100vh;
+      position: fixed;
+      border: 1px solid rgba(0, 0, 0, 0.237);
+      box-shadow: 1px black;
+    }
+
+    .layout .main {
+      grid-area: main;
+      background-color: #f9fafb;
+    }
+    .layout .main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: minmax(40px, auto);
+      gap: 2px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "leader leader leader leader leader leader leader leader leader"
+        "stock  stock stock Income Income Income money money money"
+        "vigor vigor vigor tablle tablle tablle tablle tablle tablle"
+        "Analysis Analysis Analysis tablle tablle tablle tablle tablle tablle"
+        " preview preview preview test test test Monthly Monthly Monthly"
+        "preview preview preview test test test Monthly Monthly Monthly"
+        "preview preview preview details details details Monthly Monthly Monthly"
+        "preview preview preview details details details Monthly Monthly Monthly";
+    }
+  }
+
+@media screen and (min-width: 1400px) {
+}
+
+/***** End media *****/
