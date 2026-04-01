@@ -64,9 +64,6 @@ body::-webkit-scrollbar {
 }
 
 /***** sidbar *****/
-.sidebar{
-  display: none;
-}
 .sidebar .manger {
   display: flex;
   flex-wrap: wrap;
