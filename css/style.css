@@ -64,7 +64,9 @@ body::-webkit-scrollbar {
 }
 
 /***** sidbar *****/
-
+.sidebar{
+  display: none;
+}
 .sidebar .manger {
   display: flex;
   flex-wrap: wrap;
@@ -361,7 +363,7 @@ body::-webkit-scrollbar {
   color: black;
 }
 .tablle table {
-  width: 100%;
+  width: 150%;
   table-layout: fixed;
   text-align: right;
   border-collapse: separate;
@@ -921,9 +923,16 @@ body::-webkit-scrollbar {
 /***** media qqqq*****/
 
 @media screen and (min-width: 768px) {
+  .main > div{
+    margin: 8px;
+  }
 }
   
   @media screen and (min-width: 992px) {
+.sidebar{
+  display: block;
+}
+
     
   }
 
