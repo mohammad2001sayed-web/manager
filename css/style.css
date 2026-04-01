@@ -363,7 +363,7 @@ body::-webkit-scrollbar {
   color: black;
 }
 .tablle table {
-  width: 150%;
+  width: 100%;
   table-layout: fixed;
   text-align: right;
   border-collapse: separate;
