@@ -370,6 +370,7 @@ scrollbar-width: thin;
   border-collapse: separate;
   border-spacing: 10px 20px;
   font-size: 12px;
+    overflow-x: auto;
 }
 
 .tablle table tr img {
