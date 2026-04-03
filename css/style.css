@@ -28,8 +28,8 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "sidebar main"
-    "sidebar main";
+    "main"
+    "main";
 }
 .layout .sidebar {
   grid-area: sidebar;
@@ -40,6 +40,7 @@ body::-webkit-scrollbar {
   position: static;
   border: 1px solid rgba(0, 0, 0, 0.237);
   box-shadow: 1px black;
+  display: none;
 }
 .sidebar{
 scrollbar-width: thin;
@@ -341,6 +342,7 @@ scrollbar-width: thin;
 
 .tablle {
   grid-area: tablle;
+  overflow-x: auto;
 }
 .tablle .offer {
   display: flex;
@@ -967,6 +969,7 @@ scrollbar-width: thin;
       position: fixed;
       border: 1px solid rgba(0, 0, 0, 0.237);
       box-shadow: 1px black;
+      display: block;
     }
 
     .layout .main {
