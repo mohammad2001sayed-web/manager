@@ -407,9 +407,6 @@ scrollbar-width: thin;
   border-radius: 50%;
   align-self: center;
 }
-/* .hide-mobile{
-  display: none;
-} */
 
 
 /***** End tabble *****/
@@ -946,9 +943,6 @@ scrollbar-width: thin;
     .main > div {
       margin: 10px;
     }
-    .hide-mobile{
-  display: table-cell;
-}
 
 
     .layout {
