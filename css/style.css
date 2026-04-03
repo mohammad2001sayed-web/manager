@@ -341,6 +341,9 @@ scrollbar-width: thin;
 
 .tablle {
   grid-area: tablle;
+      overflow-x: auto;
+      width: 100%;
+
 }
 .tablle .offer {
   display: flex;
@@ -364,13 +367,12 @@ scrollbar-width: thin;
   color: black;
 }
 .tablle table {
-  width: 100%;
+  width: 800px;
   table-layout: fixed;
   text-align: right;
   border-collapse: separate;
   border-spacing: 10px 20px;
   font-size: 12px;
-    overflow-x: auto;
 }
 
 .tablle table tr img {
