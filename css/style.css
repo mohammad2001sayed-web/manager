@@ -367,8 +367,7 @@ scrollbar-width: thin;
   color: black;
 }
 .tablle table {
-  width: 800px;
-  table-layout: fixed;
+  width:100%;
   text-align: right;
   border-collapse: separate;
   border-spacing: 10px 20px;
