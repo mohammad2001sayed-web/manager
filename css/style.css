@@ -341,9 +341,6 @@ scrollbar-width: thin;
 
 .tablle {
   grid-area: tablle;
-      overflow-x: auto;
-      width: 100%;
-
 }
 .tablle .offer {
   display: flex;
@@ -367,7 +364,8 @@ scrollbar-width: thin;
   color: black;
 }
 .tablle table {
-  width:100%;
+  width: 100%;
+  table-layout: fixed;
   text-align: right;
   border-collapse: separate;
   border-spacing: 10px 20px;
@@ -408,6 +406,9 @@ scrollbar-width: thin;
   padding-block: 9px;
   border-radius: 50%;
   align-self: center;
+}
+.hide-mobile{
+  display: none;
 }
 
 
@@ -945,6 +946,9 @@ scrollbar-width: thin;
     .main > div {
       margin: 10px;
     }
+    .hide-mobile{
+  display: table-cell;
+}
 
 
     .layout {
