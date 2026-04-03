@@ -407,9 +407,9 @@ scrollbar-width: thin;
   border-radius: 50%;
   align-self: center;
 }
-.hide-mobile{
+/* .hide-mobile{
   display: none;
-}
+} */
 
 
 /***** End tabble *****/
